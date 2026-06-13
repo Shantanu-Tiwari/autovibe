@@ -6,7 +6,7 @@ import { GtmAgentSchema } from '@/lib/schema';
 import { MOCK_PAYLOAD } from '@/lib/mock';
 
 // Extend max duration if deployed on Vercel
-export const maxDuration = 30;
+export const maxDuration = 90;
 
 export async function POST(req: Request) {
   try {
@@ -16,9 +16,9 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Idea is required' }, { status: 400 });
     }
 
-    // Wrap execution in a 45-second timeout
+    // Wrap execution in a 90-second timeout
     const timeoutPromise = new Promise<never>((_, reject) =>
-      setTimeout(() => reject(new Error('Global API Timeout Exceeded')), 45000)
+      setTimeout(() => reject(new Error('Global API Timeout Exceeded')), 90000)
     );
 
     const executionPromise = async () => {

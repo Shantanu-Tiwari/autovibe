@@ -18,7 +18,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Campaign not found' }, { status: 404 });
     }
 
-    const emailLeads = campaign.leads.filter(l => l.email.includes('@'));
+    const emailLeads = campaign.leads.filter((l: any) => l.email.includes('@'));
 
     if (emailLeads.length === 0) {
       return NextResponse.json({ message: 'No valid email leads found to send.' });

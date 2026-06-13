@@ -66,7 +66,7 @@ export async function POST(req: Request) {
               const emailRegex = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi;
               const matches = snippet.match(emailRegex);
               if (matches && matches.length > 0) {
-                matches.forEach((email) => {
+                matches.forEach((email: string) => {
                   leads.push({
                     type: "email",
                     source: "LinkedIn / Web",

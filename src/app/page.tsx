@@ -186,7 +186,6 @@ export default function Home() {
   return (
     <main className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12">
       <header className="text-center space-y-4">
-        <motion.div 
         <div className="flex justify-center items-center gap-4 mb-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-gray-400">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
