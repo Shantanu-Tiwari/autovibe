@@ -13,6 +13,8 @@
     "@ai-sdk/google": "^3.0.82",
     "@ai-sdk/openai": "^3.0.71",
     "@google-analytics/data": "^6.1.0",
+    "@libsql/client": "^0.17.3",
+    "@prisma/adapter-libsql": "^7.8.0",
     "@prisma/client": "^7.8.0",
     "ai": "^6.0.204",
     "framer-motion": "^12.40.0",
